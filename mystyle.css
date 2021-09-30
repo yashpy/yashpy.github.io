@@ -1,9 +1,10 @@
- * {box-sizing: border-box;}
+  * {box-sizing: border-box;}
 
 body { 
 background-color: #fff;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+background-color:#FAF9F6;
 }
 
 .header {
@@ -422,7 +423,116 @@ border:1px solid black;
 }
  
 .ex2 {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: auto;
+ 
+}
+ 
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+ 
+.tl2 ul {
+  list-style: none;
+  position: absolute;
+  top: 350%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1px 100px;
+  color: #000;
+  font-size: 13px;
+}
+.tl2 ul:before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  border-left: 2px dashed #fff;
+  
+}
+.tl2 ul li {
+  position: relative;
+  margin-left: 30px ;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 14px;
+  border-radius: 6px;
+  width: 250px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08)
+}
+.tl2 ul li:not(:first-child) {
+  margin-top: 60px;
+}
+.tl2 ul li > span {
+  width: 2px;
+  height: 100%;
+  background: #fff;
+  left: -30px;
+  top: 0;
+  position: absolute;
+}
+.tl2 ul li > span:before, .tl2 ul li > span:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  background: #86b7e7;
+  left: -5px;
+  top: 0;
+}
+.tl2 ul li span:after {
+  top: 100%;
+}
+.tl2 ul li > div {
+  margin-left: 10px;  
+}
+.tl2 div .title, .tl2 div .type {
+  font-weight: 600;
+  font-size: 12px;
+}
+.tl2 div .info {
+  font-weight: 300;
+}
+.tl2 div > div {
+  margin-top: 5px;
+}
+.tl2 span.number {
+  height: 100%;
+}
+.tl2 span.number span {
+  position: absolute;
+  font-size: 10px;
+  left: -35px;
+  font-weight: bold;
+}
+.tl2 span.number span:first-child {
+  top: 0;
+}
+.tl2 span.number span:last-child {
+  top: 100%;
+}
+.tl2{
+background-color:#bea2e7;
+ 
+ font-family: 'Open Sans', sans-serif;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bea2e7+0,86b7e7+100 */
+background: #bea2e7; /* Old browsers */
+background: -moz-linear-gradient(top,  #bea2e7 0%, #86b7e7 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #bea2e7 0%,#86b7e7 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #bea2e7 0%,#86b7e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bea2e7', endColorstr='#86b7e7',GradientType=0 );
  
 }
