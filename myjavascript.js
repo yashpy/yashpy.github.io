@@ -1,4 +1,4 @@
-   var form = document.getElementById("my-form");
+ var form = document.getElementById("my-form");
     
     async function handleSubmit(event) {
       event.preventDefault();
@@ -17,6 +17,8 @@
         status.innerHTML = "Oops! There was a problem submitting your form"
       });
     }
+    form.addEventListener("submit", handleSubmit)
+
 
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
