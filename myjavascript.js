@@ -78,6 +78,55 @@ window.onload = function() {
 };
 
 
+ function validation(){
+	var form=document.getElementById("my-form");
+var email=document.getElementById("email").value;
+var text=document.getElementById("my-form-status");
+var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
+if(email.match(pattern)){
+	form.classList.add("valid");
+	form.classList.remove("invalid");
+	text.innerHTML="Your Email Address is Valid.";
  
+}
+else{
+	form.classList.remove("valid");
+form.classList.add("invalid");
+text.innerHTML=" Please enter Valid Email Address";
+ 
+}
+if(email.match(pattern)){
+	form.classList.remove("valid");
+	form.classList.remove("invalid");
+	text.innerHTML="";
+ 
+}
+}
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1200, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
  
