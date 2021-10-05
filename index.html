@@ -30,6 +30,7 @@
  
  
 </head>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
 <body >
  
    <div class="ex2">
@@ -42,7 +43,7 @@
 <a href="#edu" >Education</a>
 <a href="#exp"  >Experience</a>
  <a href="#proj" >Projects</a>
-<a href="#resume" >Resume</a>
+ 
 <a href="#blog" >Blogs</a>
     <a href="#contact1" >Contact</a>
    <!---
@@ -107,8 +108,8 @@ https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
       <span></span>
       <div>
  <img src="images/wcesait.jpg"; style="width:30px;height:30px">
-        <div class="title">SAIT(Students' Association of Information Technology)</div>
-        <p>Beyond The Limitations Next to Perfection</p>
+        <div class="title">Mentor & Information Director</div>
+        <p>SAIT(Students' Association of Information Technology)</p>
         <div class="type">Feb20-Present | Sangli, India</div>
       </div>
      <span class="number">
@@ -121,7 +122,7 @@ https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
         <span></span>
 <img src="images/lac.jpg"; style="width:30px;height:30px">
         <div class="title">IT Administrator</div>
- <p>Lab Admin Committee LAC</p>
+ <p>Lab Admin Committee(LAC)</p>
         <div class="type">Jun19-May21 | Sangli, India</div>
       </div>
       <span class="number">
@@ -146,8 +147,8 @@ https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
       <div>
         <span></span>
 <img src="images/wlug.jpg"; style="width:30px;height:30px">
-        <div class="title">WLUG(Walchand's Linux Users's Group)</div>
- <p>Core Member</p>
+        <div class="title">Core Member</div>
+ <p>WLUG(Walchand's Linux Users's Group)</p>
         <div class="type">Jun19-Feb20 | Sangli, India</div>
       </div>
       <span class="number">
@@ -158,26 +159,44 @@ https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
   </ul>
 </div>
       </div>
-<div id = "proj">
-         
+ 
+         <div id="proj" align="center">
  <br><br><br> <br> <br>
 <h2 align="center">PROJECTS</h2><hr style="width:100px; margin: auto; background-color:#000" />
 <br><br>
-<div class="m">
-<div class="im"></div>
-<div class="pm"></div>
+  
+ <div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, 'Virtual Police Station')">Virtual Police Station</button>
+  <button class="tablinks" onmouseover="openCity(event, 'D-Detecto')">D-Detecto</button>
+  <button class="tablinks" onmouseover="openCity(event, 'ScrapDeal')">ScrapDeal</button>
 </div>
-<div class="m">
-<div class="im"></div>
-<div class="pm"></div>
+
+<div id="Virtual Police Station" class="tabcontent">
+ <a href="https://github.com/yashpy/Virtual-police_station"><h3>Virtual Police Station</h3></a>
+  <p>Virtual Police Station using Criminal Records Management System and Digital Signature</p>
+<br><img src="images/p3.jpg" style="height:200px;width:auto" >
 </div>
-<div class="m">
-<div class="im"></div>
-<div class="pm"></div>
+
+<div id="D-Detecto" class="tabcontent">
+ <a href="https://github.com/yashpy/ObjectDetection"> <h3>D-Detecto</h3></a>
+  <p>Detection and Retrieval of Object in an Image/Video Using YOLO & SSD and its Comparative Analysis &Study.</p> 
+<br><img src="images/p2.jpg" style="height:200px;width:auto" >
 </div>
+
+<div id="ScrapDeal" class="tabcontent">
+  <a href="https://github.com/yashpy/Scrapdeal"><h3>ScrapDeal</h3></a>
+  <p>Scrapdeal i The Application provides the features of selling and buying of used goods , unwanted things to sell. ii. The App will mainly focus on the notifying about the damaged things or need to rectify and fix the damaged or scrap things.</p>
+
+<img src="images/p1.jpg" style="height:200px;width:auto" >
+</div>
+
+<div class="clearfix"></div>
+ 
+ 
+<div align="center">
 <a href="https://drive.google.com/file/d/1DZ0_L7jHDI1Z2509mmbvN4QVG15QLTuT/view?usp=sharing" data-toggle="tooltip" title="Hire Me!" target="_blank">
 <button class="button button1"> Resume</button></a>
-      </div>
+       </div>
  
  <div id = "blog">
 
@@ -285,13 +304,13 @@ https://www.sitepoint.com/community/t/display-form-sent-successfully-on-same-pag
  </div>
 <div id = "abt" style="background-color:white">
          
- <br><br><br> <br><br>
+  <br><br><br> <br><br>
 <h1 align="center" style="color:#099; left-margin:2px"></h1> 
-<h3 align="center" style="color:#099; left-margin:2px">Copyright 2021 © Yadnesh S Deshpande. <a href="https://legislative.gov.in/sites/default/files/COI-updated.pdf">All rights reserved</a></h3>
+<h3 align="center" style="color:#099; left-margin:2px">Copyright 2021 © Yadnesh S Deshpande. <a target="_blank" href="https://legislative.gov.in/sites/default/files/COI-updated.pdf">All rights reserved</a></h3>
  <br>
 <br><br>
       </div>
-</div>
+ 
  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
  
  
@@ -302,5 +321,10 @@ https://www.sitepoint.com/community/t/display-form-sent-successfully-on-same-pag
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"68c8a1d26bd931b1","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.8.1","si":10}'></script>
 
 <script  src="myjavascript.js"></script> 
+ 
+<script>
+myShow = w3.slideshow(".nature", 0);
+</script>
+
 </body>
 </html>
