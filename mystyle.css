@@ -443,10 +443,13 @@ border:1px solid black;
 
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
- 
+.t2{
+  position: relative;
+  top: 311%;
+}
 .tl2 ul {
   list-style: none;
-  position: absolute;
+  position: relative;
   top: 311%;
   left: 50%;
   transform: translate(-50%, -50%);
