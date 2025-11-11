@@ -1,4 +1,4 @@
-# 🌟 DeveloperFolio Clone — Yadnesh
+# 🌟 Yadnesh Deshpande Portfolio
 
 A modern, scroll-interactive developer portfolio built with **React + TailwindCSS + Vite**.
 
