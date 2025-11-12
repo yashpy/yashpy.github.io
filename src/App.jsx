@@ -80,6 +80,7 @@ export default function App() {
       desc: "Built emotion detection model (>82% accuracy) using NLP and ML models such as SVM, XGBoost, and MLP.",
       tech: [<FaPython color="#3776AB" />, <SiTensorflow color="#FF6F00" />, <FaCogs color="#6B7280" />],
       img: "/images/sentiment_analysis.png",
+      github: "https://github.com/yashpy/BTECH_Project",
     },
     {
       id: 2,
@@ -87,6 +88,7 @@ export default function App() {
       desc: "Developed a full-stack web app to digitize crime records and automate reporting workflows.",
       tech: [<FaReact color="#61DBFB" />, <FaHtml5 color="#E34F26" />, <FaCss3Alt color="#1572B6" />, <SiMysql color="#4479A1" />],
       img: "/images/virtual_police_station.png",
+      github: "https://github.com/yashpy/Virtual-police_station",
     },
     {
       id: 3,
@@ -94,6 +96,7 @@ export default function App() {
       desc: "Detected Dream11 logos using YOLOv3; compared YOLO vs SSD for accuracy and speed.",
       tech: [<FaPython color="#3776AB" />, <SiOpencv color="#5C3EE8" />, <SiTensorflow color="#FF6F00" />],
       img: "/images/d_detecto.webp",
+      github: "https://github.com/yashpy/ObjectDetection",
     },
     {
       id: 4,
@@ -101,6 +104,7 @@ export default function App() {
       desc: "Android app for campus trading using Firebase backend, deployed on Aptoide Store.",
       tech: [<FaJava color="#007396" />, <FaDatabase color="#6B7280" />, <FaCogs color="#6B7280" />],
       img: "/images/scrapdeal.png",
+      github: "https://github.com/yashpy/Scrapdeal",
     },
   ];
 
@@ -126,6 +130,38 @@ export default function App() {
     { name: "Databases", icon: <FaDatabase color="#6B7280" size={40} /> },
     { name: "Cloud", icon: <FaCloud color="#00ADEF" size={40} /> },
   ];
+
+      const blogData = [
+      {
+        id: 1,
+        title: "The Synergy of Quantum Computing and AI in Manufacturing: A Path to Enhanced Efficiency",
+        link: "https://medium.com/@yadnesh-deshpande1/the-synergy-of-quantum-computing-and-ai-in-manufacturing-a-path-to-enhanced-efficiency-and-1bf0cddbe10e",
+        date: "Published Oct 30, 2024 · 5 min read · Updated Nov 14, 2024",
+        img: "/images/B4.jpg",
+      },
+      {
+        id: 2,
+        title: "Object Detection Study and Analysis: (Accuracy, speed (YOLO & SSD))",
+        link: "https://medium.com/@yadnesh-deshpande1/object-detection-study-and-analysis-accuracy-speed-yolo-ssd-91ec4032661a",
+        date: "Published Dec 30, 2020 · 12 min read · Updated Dec 25, 2021",
+        img: "/images/B3.png",
+      },
+      {
+        id: 3,
+        title: "Google Cloud Platform — The Good, Bad, and Ugly (It’s Mostly Good)",
+        link: "https://medium.com/@yadnesh-deshpande1/google-cloud-platform-the-good-bad-and-ugly-its-mostly-good-a0089677cccf",
+        date: "Published Oct 9, 2020 · 5 min read · Updated Dec 15, 2021",
+        img: "/images/B2.png",
+      },
+      {
+        id: 4,
+        title: "How Netflix works to stream a video to its User",
+        link: "https://medium.com/@yadnesh-deshpande1/how-netflix-work-to-stream-a-video-to-its-user-10fcdccd3044",
+        date: "Published Sep 8, 2020 · 4 min read · Updated Dec 15, 2021",
+        img: "/images/B1.jpg",
+      },
+    ];
+
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white text-gray-900">
@@ -229,23 +265,57 @@ export default function App() {
         </section>
 
         {/* PROJECTS GRID */}
-        <section ref={sections.projects} id="projects" className="max-w-5xl mx-auto px-6 py-16">
-          <h3 className="text-xl font-semibold mb-6">Projects</h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {projectData.map(p => (
-              <div key={p.id} className="group relative rounded-lg overflow-hidden shadow-lg cursor-pointer bg-gray-100">
-                <img src={p.img} alt={p.title} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-4">
-                  <h4 className="text-white font-semibold">{p.title}</h4>
-                  <p className="text-sm text-gray-200 mt-2">{p.desc}</p>
-                  <div className="flex flex-wrap gap-2 mt-3 justify-center">
-                    {p.tech.map((t,i)=><span key={i} className="px-2 py-1 border rounded text-white text-xs">{t}</span>)}
-                  </div>
-                </div>
+<section ref={sections.projects} id="projects" className="max-w-5xl mx-auto px-6 py-16">
+  <h3 className="text-xl font-semibold mb-6">Projects</h3>
+  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {projectData.map(p => (
+      <a
+        key={p.id}
+        href={p.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative rounded-lg overflow-hidden shadow-lg cursor-pointer bg-gray-100"
+      >
+        <img
+          src={p.img}
+          alt={p.title}
+          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-4">
+          <h4 className="text-white font-semibold">{p.title}</h4>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+
+      <section id="blogs" className="max-w-5xl mx-auto px-6 py-16">
+        <h3 className="text-xl font-semibold mb-6">Blogs & Articles</h3>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {blogData.map(blog => (
+            <a 
+              key={blog.id} 
+              href={blog.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative rounded-lg overflow-hidden shadow-lg cursor-pointer bg-gray-100"
+            >
+              {blog.img && (
+                <img 
+                  src={blog.img} 
+                  alt={blog.title} 
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                />
+              )}
+              <div className="p-4">
+                <h4 className="font-semibold text-gray-900 group-hover:text-indigo-600">{blog.title}</h4>
+                <p className="text-gray-500 text-sm mt-1">{blog.date}</p>
               </div>
-            ))}
-          </div>
-        </section>
+            </a>
+          ))}
+        </div>
+      </section>
 
         {/* CONTACT */}
         <section ref={sections.contact} id="contact" className="max-w-5xl mx-auto px-6 py-16">
