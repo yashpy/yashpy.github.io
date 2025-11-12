@@ -13,9 +13,9 @@ import {
   FaCss3Alt, 
   FaJsSquare, 
   FaAngular, 
-  FaGithub,       // for footer / social
-  FaLinkedin,     // for footer / social
-  FaEnvelope      // for email
+  FaGithub,   
+  FaLinkedin,     
+  FaEnvelope 
 } from "react-icons/fa";
 
 import { 
@@ -265,29 +265,36 @@ export default function App() {
         </section>
 
         {/* PROJECTS GRID */}
-<section ref={sections.projects} id="projects" className="max-w-5xl mx-auto px-6 py-16">
-  <h3 className="text-xl font-semibold mb-6">Projects</h3>
-  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-    {projectData.map(p => (
-      <a
-        key={p.id}
-        href={p.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative rounded-lg overflow-hidden shadow-lg cursor-pointer bg-gray-100"
-      >
-        <img
-          src={p.img}
-          alt={p.title}
-          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-4">
-          <h4 className="text-white font-semibold">{p.title}</h4>
-        </div>
-      </a>
-    ))}
-  </div>
-</section>
+        <section ref={sections.projects} id="projects" className="max-w-5xl mx-auto px-6 py-16">
+          <h3 className="text-xl font-semibold mb-6">Projects</h3>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {projectData.map(p => (
+              <a
+                key={p.id}
+                href={p.github} // Make sure each project in projectData has a github property
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative rounded-lg overflow-hidden shadow-lg cursor-pointer bg-gray-100"
+              >
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-4">
+                  <h4 className="text-white font-semibold">{p.title}</h4>
+                  <p className="text-sm text-gray-200 mt-2">{p.desc}</p>
+                  <div className="flex flex-wrap gap-2 mt-3 justify-center">
+                    {p.tech.map((t, i) => (
+                      <span key={i} className="px-2 py-1 border rounded text-white text-xs">{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
 
 
       <section id="blogs" className="max-w-5xl mx-auto px-6 py-16">
