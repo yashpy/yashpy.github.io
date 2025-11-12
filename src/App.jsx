@@ -203,13 +203,16 @@ export default function App() {
               <button onClick={() => scrollTo('contact')} className="px-4 py-2 rounded-lg bg-indigo-600 text-white">Get in touch</button>
             </div>
           </div>
-        <div className="p-6 rounded-2xl bg-white max-w-20xl mx-auto flex justify-center">
-          <img
-            src="/images/portfolio.png"
-            alt="Hero"
-            className="w-full h-100 md:h-100 lg:h-56"
-          />
-        </div>
+          <div className="flex justify-center">
+            <div className="rounded-2xl overflow-hidden w-3/4 md:w-3/4 lg:w-3/4">
+              <img
+                src="/images/portfolio.png"
+                alt="Photo_cover"
+                className="w-full h-auto object-cover rounded-2xl"
+              />
+            </div>
+          </div>
+
         </section>
 
         {/* ABOUT */}
